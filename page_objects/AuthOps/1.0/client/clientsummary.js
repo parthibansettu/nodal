@@ -8,6 +8,11 @@ class ClientSummaryPage extends Page {
     get quickViewTitle() { return browser.element('div.reskinpagetitle'); }
     get addNewInsurance() { return browser.element('a=add new');}
 
+
+    //Patient action bar elements
+    get clinicals() { return browser.element('//*[@id="ActionMenu_Clinicals_span"]'); }
+    get chart() { return browser.element('//*[@id="ActionMenu_Clinicals"]/div[1]'); }
+
     // Method Waits for the ClientSummary page to be loaded.
     client_summary_page_loaded() {
         Action.waitForJSReadystate();
@@ -19,6 +24,14 @@ class ClientSummaryPage extends Page {
         this.addNewInsurance.click();
         Action.waitForJSReadystate();
         Action.setFrMainFrame();
+    }
+
+    //Method to  navigate chart page through patient action bar
+    navigate_chart_via_patient_action_bar() {
+        Action.setFrMainFrame();
+        this.clinicals.click();
+        Action.waitForPageToLoad(this.chart, "1000");
+        this.chart.click();
     }
 
 }

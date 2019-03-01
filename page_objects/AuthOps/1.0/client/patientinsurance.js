@@ -10,6 +10,7 @@ class PatientInsurance extends Page {
     navigate_to_client_summary_page_via_add_policy() {
         Action.waitForElementToLoad(this.addInsurance, 5000);
         this.addInsurance.click();
+
     }
 
 

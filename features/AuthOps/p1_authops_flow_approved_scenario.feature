@@ -15,6 +15,7 @@ Feature: Authops flow for approved scenario
         Then Navigate to Patient Insurance Search Page
         Then Search Standard Insurance and Navigate to Patient Insurance Page
         Then Enter Insurance Information and Add Insurance
+        Then Navigate to chart page through patient action bar
         Examples:
         |filename|
         |"././data_set/p1_authops_flow_approved_scenario.yml"|
