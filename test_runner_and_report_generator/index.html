@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Run Feature Files And Generate Report </title>
+        <link rel="stylesheet" href="./index.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+    <body>
+        <div class = 'runner_header'>
+            <img src="./img/logo.jpeg" alt="Athena Health" >
+            <h1 id="auto_name"> Nodal </h1>
+            <h1 id="page_title"> Run Test Generate Report</h1>
+        </div>
+        <div class = 'runner_center' >
+            <div class="workflow" id="workflow_list">
+                <! workflow feature folder>
+            </div>
+            <div class="feature_list">
+                <! Feature list from workflow feature folder>
+                <label>Select Feature File</label><br /><br />
+                <div class="subject-info-box-1" id= "workflow_feature">
+                    <! workflow feature folder>
+                    <select multiple="multiple" id='lstBox1' class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="navigation_buttons">
+                <input type="button" id="btnAllRight" value=">>" class="btn-default" /><br />
+                <input type="button" id="btnRight" value=">" class="btn-default" /><br />
+                <input type="button" id="btnLeft" value="<" class="btn-default" /><br />
+                <input type="button" id="btnAllLeft" value="<<" class="btn-default" />
+            </div>
+            <div class="selected_feature_list">
+                <! Feature list from workflow feature folder>
+                <label>Selected Feature File</label><br /><br />
+                <div class="subject-info-box-2"">
+                    <select multiple="multiple" id='lstBox2' class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="run_and_generate">
+                <button id= 'generate' type="button" >Run Test</button>
+            </div>
+            <div class="allure_type">
+                <button id= 'allure_report' type="button" >View Allure Report</button>
+            </div>
+            <div class="html_type">
+                <button id= 'html_report' type="button" >View HTML Report</button>
+            </div>
+        </div>
+    </body>
+</html>

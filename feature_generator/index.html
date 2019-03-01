@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title> Generate Feature Files using existing steps from Step Definitions files </title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="./index.js"></script>
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body onbeforeunload="return dontClose()">
+        <div class = 'feature-gen-header'>
+            <img src="./img/logo.jpeg" alt="Athena Health" />
+            <h1 id="auto_name"> Nodal </h1>
+            <h1 id="page_title"> Feature File Generator</h1>
+        </div>
+		<p id="describePage"> <b>Tips:</b> <br />
+			* Add Feature title, description and click Create New Feature. Then add Scenario Outline to continue with adding Steps. <br />
+			* Choose step from existing Step Definitions files or add under Create Feature For Preview. <br />
+			* Keep re-writing feature file until you close or refresh the window. <br />
+			* Do not attempt to refresh the window, All contents will be lost.. <br />
+		</p>
+		<input type="button" id="resetFeatureFile" class="reset-feature-file" value="Reset and Start with New Feature File" style="visibility: hidden;" /> <br />
+		<div id="featureStepsAddContainer" class="feature-steps-add-container">
+			<h2 align="left"> Create Feature For Preview </h2>
+			<div id="createFeatureForPreviewError" class="error-message"></div>
+			<div id="featureTitleHolder">
+				<label for="featureTitle"> Feature Title: </label>
+				<input type="text" id="featureTitle" class="feature-title" size="40" maxlength="40" />
+			</div>
+			<div id="featureDescriptionHolder">
+				<label for="featureDescription"> Feature Description: </label>
+				<textarea id="featureDescription" class="feature-description" rows="2" cols="30" placeholder="Enter your feature description here..."></textarea><br /><br />
+			</div>
+			<input type="button" id="createNewFeature" class="create-new-feature" value="Enable Feature File Preview" />
+			<div id="scenarioOutlineHolder" style="visibility: hidden;">
+				<label for="scenarioOutline"> Scenario Outline: </label>
+				<div id="scenarioListHolder">
+					<select id="scenarioOutlineList" class="scenario-outline-list" style="width: 80%">
+						<option></option>
+						<option value="Add New Scenario"> Add New Scenario</option>
+					</select>
+				</div>
+				<div id="addNewScenarioHolder" style="visibility: hidden;">
+					<textarea id="addScenarioOutline" class="add-scenario-outline" rows="3" cols="30" placeholder="Enter your scenario here..."></textarea> <br />
+					<input type="button" id="updateScenarioList" class="update-scenario-list" value="Add Scenario to List" />
+				</div>
+			</div>
+			<div id="featureStepHolder" style="visibility: hidden;">
+				<label for="gherkinType"> Step Type: </label>
+				<select id="gherkinType" class="gherkin-type">
+					<option value="Given"> Given </option>
+					<option value="When"> When </option>
+					<option value="Then"> Then </option>
+				</select> <br />
+				<label for="featureStep"> Feature Step: <i>(You can either enter new Step or choose from already existing Steps)</i> </label> <br />
+				<textarea id="featureStep" class="feature-step" rows="3" cols="30" placeholder="Enter your feature step here..."></textarea> <br />
+				<input type="button" id="addNewFeatureStep" class="add-new-feature-step" value="Add New Step to Feature" /> 
+				<p> If you want to use an already existing Steps from Step Definition file, please use the below section: </p> 
+				<div id="stepDefinitionFilesListHolder">
+					<label for="stepDefinitionsFilesList"> Filter by Step Definition file: </label>
+					<div id="stepDefinitionsFilesList" class="step-definitions-files-list">
+					</div>
+				</div>
+				<input type="button" id="stepDefAll" value="All" />
+				<input type="button" id="stepDefGiven" value="Given" />
+				<input type="button" id="stepDefWhen" value="When" />
+				<input type="button" id="stepDefThen" value="Then" />
+				<div id="stepDefinitionsHolder">
+					<label for="stepDefinitions"> Step Definitions generated from files: </label>
+					<div id="stepDefinitions" class="step-definitions">
+					</div>
+				</div>
+				<input type="button" id="addStepToFeature" class="add-step-to-feature" value = "Add Selected Step to Feature" />
+			</div>
+			<div id="featureListHolder" style="visibility: hidden;">
+				<h2 align="center"> Feature File Preview </h2>
+				<div id="featureTitleContent">
+				</div><br />
+				<div id="featureDescriptionContent">
+				</div><br />
+				<div id="scenarioContainer">
+				</div>
+			</div>
+			<div id="featureFileExportHolder" class="feature-file-export-holder" style="visibility: hidden;">
+				<h2 align="center"> Export Feature Steps to Feature File </h2>
+				<div id="exportErrorMessage" class="error-message"></div>
+				<label for="projectListForFeature"> Folder under which your Feature file should be created: </label>
+				<div id="projectListForFeature" class="project-list-for-feature">
+				</div> 
+				<div id="folderCreated" class="folder-created">
+				</div><br />
+				<div id="addNewFolderHolder" style="visibility: hidden;">
+					<input type="text" id="addFeaturesFolder" class="add-features-folder" size="40" maxlength="40"/> 
+					<input type="button" id="addFolderUnderFeatures" class="add-folder-under-features" value="Add Folder under Features" />
+				</div><br />
+				<label for="addFeatureFileName"> File Name: </label>
+				<input type="text" id="addFeatureFileName" class="add-feature-filename" size="10" maxlength="40" />.feature <br /><br />
+				<input type="button" id="createFeatureFile" class="create-feature-file" value="Export above steps as Feature file" /><br />
+				<div id="exportMessage" class="success-message"></div>
+			</div>
+		</div>
+	</body>
+</html>

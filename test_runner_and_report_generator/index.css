@@ -1,0 +1,154 @@
+
+.runner_header {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	align: center;
+	border: solid;
+	border-style: solid;
+	background-color: #678a2b;
+}
+.runner_header img{
+	position: absolute;
+	width: 20%;
+	height: 100%;
+	align: left;
+}
+#page_title{
+	text-align: center;
+}
+#auto_name{
+	text-align: center;
+}
+.runner_center {
+	padding-top: 150px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	align: center;
+	border: solid;
+	border-style: solid;
+}
+
+.run_type {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	font-weight: bold;
+}
+
+select{
+	background-color: #dbeeba;	
+}
+
+.report_type {
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	font-weight: bold;
+}
+
+.workflow {
+	position: absolute;
+	align-content: center;
+	top: 20%;
+	right: 45%;
+	font-weight: bold;
+}
+
+.feature_list {
+	position: absolute;
+	left: 30%;
+	bottom: 40%;
+	font-weight: bold;
+}
+.feature_list select{
+	width: 200px;
+	height: 200px;
+}
+
+.navigation_buttons {
+	position: absolute;
+	right: 50%;
+	bottom: 50%;
+}
+
+.selected_feature_list{
+	position: absolute;
+	right: 30%;
+	bottom: 40%;
+	font-weight: bold;
+}
+
+.selected_feature_list select{
+	width: 200px;
+	height: 200px;
+}
+.run_and_generate {
+	position: absolute;
+	right: 60%;
+	bottom: 30%;
+}
+
+.run_and_generate button {
+	width: 250px;
+	position: absolute;
+	background-color: #556b2f;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 8px 2px;
+	cursor: pointer;
+	left: 35%;
+	bottom: 30%;
+}
+
+.html_type {
+	position: absolute;
+	left: 30%;
+	bottom: 20%;
+}
+
+.html_type button {
+	width: 250px;
+	position: absolute;
+	background-color: #556b2f;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 8px 2px;
+	cursor: pointer;
+	left: 35%;
+	bottom: 30%;
+}
+
+.allure_type {
+	position: absolute;
+	right: 50%;
+	bottom: 20%;
+}
+
+.allure_type button {
+	width: 250px;
+	position: absolute;
+	background-color: #556b2f;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 8px 2px;
+	cursor: pointer;
+	left: 35%;
+	bottom: 30%;
+}

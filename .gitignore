@@ -1,0 +1,7 @@
+# Don't track these folders and files
+node_modules/
+reports/
+new folder/
+allure-report/
+debug.log
+package-lock.json
